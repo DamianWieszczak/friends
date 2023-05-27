@@ -10,7 +10,8 @@
       <th>Name</th>
       <th>Surname</th>
       <th>Email</th>
-      <th>Actions</th>
+      <th>Meeting Place</th>
+      <th>Actions</th>      
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,7 @@
         <td><%= friend.name %></td>
         <td><%= friend.surname %></td>
         <td><%= friend.email %></td>
+        <td><%= friend.meeting_place %></td>
         <td><%= link_to "Show friend", friend, class: "btn btn-outline-info" %></td>
       </tr>
     <% end %>

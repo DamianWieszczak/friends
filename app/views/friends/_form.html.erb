@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :meeting_place, class: "form-label" %>
+    <%= form.select :meeting_place, Friend.meeting_places.keys, { include_blank: "Select meeting place..." }, class: "form-select" %>
+  </div>
+
+  <div>
     <%= form.submit class: "btn btn-outline-success mt-3" %>
   </div>
 <% end %>
