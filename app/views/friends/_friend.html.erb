@@ -1,17 +1,9 @@
-<div id="<%= dom_id friend %>">
-  <p>
-    <strong>Name:</strong>
-    <%= friend.name %>
-  </p>
+<h1 class="mb-3"><%= friend.name %> card</h1>
 
-  <p>
-    <strong>Surname:</strong>
-    <%= friend.surname %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
-
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Email: <%= friend.email %></div>
+  <div class="card-body">
+    <h5 class="card-title">Name: <%= friend.name %></h5>
+    <p class="card-text">Surname: <%= friend.surname %></p>
+  </div>
 </div>
