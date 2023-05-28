@@ -3,7 +3,7 @@ class FriendsController < ApplicationController
 
   # GET /friends or /friends.json
   def index
-    @friends = Friend.all
+    @friends = Friend.all.order(created_at: :desc)
   end
 
   # GET /friends/1 or /friends/1.json
@@ -55,6 +55,18 @@ class FriendsController < ApplicationController
       format.html { redirect_to friends_url, notice: "Friend was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def school
+    @friends = Friend.school
+  end
+
+  def holiday
+    @friends = Friend.holiday
+  end
+
+  def work
+    @friends = Friend.work
   end
 
   private

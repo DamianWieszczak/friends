@@ -4,27 +4,6 @@
 
 <%= link_to "New friend", new_friend_path, class: "btn btn-outline-primary mb-3" %>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>Email</th>
-      <th>Meeting Place</th>
-      <th>Actions</th>      
-    </tr>
-  </thead>
-  <tbody>
-    <% @friends.each do |friend| %>
-      <tr>
-        <td><%= friend.name %></td>
-        <td><%= friend.surname %></td>
-        <td><%= friend.email %></td>
-        <td><%= friend.meeting_place %></td>
-        <td><%= link_to "Show friend", friend, class: "btn btn-outline-info" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render "friends/friends_list" %>
 
 
