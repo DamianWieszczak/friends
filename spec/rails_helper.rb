@@ -17,6 +17,20 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 end
 
+config.before(:suite) do
+  DatabaseCleaner.strategy = :truncation
+end
+
+config.before do
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.start
+end
+
+config.before do
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.start
+end
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
